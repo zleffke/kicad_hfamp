@@ -88,7 +88,7 @@ U 1 1 5EB086E2
 P 2500 4650
 F 0 "J2" H 2428 4888 50  0000 C CNN
 F 1 "Conn_Coaxial" H 2428 4797 50  0000 C CNN
-F 2 "digikey-footprints:RF_SMA_BoardEdge_142-0701-801" H 2500 4650 50  0001 C CNN
+F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount" H 2500 4650 50  0001 C CNN
 F 3 " ~" H 2500 4650 50  0001 C CNN
 	1    2500 4650
 	-1   0    0    -1  
@@ -99,7 +99,7 @@ U 1 1 5EB09931
 P 6750 4000
 F 0 "J3" H 6850 3975 50  0000 L CNN
 F 1 "Conn_Coaxial" H 6850 3884 50  0000 L CNN
-F 2 "digikey-footprints:RF_SMA_BoardEdge_142-0701-801" H 6750 4000 50  0001 C CNN
+F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount" H 6750 4000 50  0001 C CNN
 F 3 " ~" H 6750 4000 50  0001 C CNN
 	1    6750 4000
 	1    0    0    -1  

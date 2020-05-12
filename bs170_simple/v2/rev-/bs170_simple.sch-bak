@@ -4,7 +4,7 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "Simple BS170 HF Power Amplifier - V1"
+Title "Simple BS170 HF Power Amplifier - V2"
 Date "2020-05-03"
 Rev "-"
 Comp "Amateur Radio"
@@ -52,7 +52,7 @@ U 1 1 5EB06520
 P 4000 3650
 F 0 "L1" H 4053 3696 50  0000 L CNN
 F 1 "L" H 4053 3605 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4000 3650 50  0001 C CNN
+F 2 "digikey-footprints:0805" H 4000 3650 50  0001 C CNN
 F 3 "~" H 4000 3650 50  0001 C CNN
 	1    4000 3650
 	1    0    0    -1  
@@ -251,10 +251,10 @@ Wire Wire Line
 	3050 3050 3050 3200
 Connection ~ 3050 3200
 $Comp
-L Transistor_FET:BS170F Q?
+L Transistor_FET:BS170F Q1
 U 1 1 5EAF85D2
 P 3900 4200
-F 0 "Q?" H 4105 4246 50  0000 L CNN
+F 0 "Q1" H 4105 4246 50  0000 L CNN
 F 1 "BS170F" H 4105 4155 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 4100 4125 50  0001 L CIN
 F 3 "http://www.diodes.com/assets/Datasheets/BS170F.pdf" H 3900 4200 50  0001 L CNN
@@ -262,10 +262,10 @@ F 3 "http://www.diodes.com/assets/Datasheets/BS170F.pdf" H 3900 4200 50  0001 L 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:BS170F Q?
+L Transistor_FET:BS170F Q2
 U 1 1 5EAF9D19
 P 4650 4200
-F 0 "Q?" H 4855 4246 50  0000 L CNN
+F 0 "Q2" H 4855 4246 50  0000 L CNN
 F 1 "BS170F" H 4855 4155 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 4850 4125 50  0001 L CIN
 F 3 "http://www.diodes.com/assets/Datasheets/BS170F.pdf" H 4650 4200 50  0001 L CNN
@@ -273,10 +273,10 @@ F 3 "http://www.diodes.com/assets/Datasheets/BS170F.pdf" H 4650 4200 50  0001 L 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:BS170F Q?
+L Transistor_FET:BS170F Q3
 U 1 1 5EAFBBD3
 P 5400 4200
-F 0 "Q?" H 5605 4246 50  0000 L CNN
+F 0 "Q3" H 5605 4246 50  0000 L CNN
 F 1 "BS170F" H 5605 4155 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5600 4125 50  0001 L CIN
 F 3 "http://www.diodes.com/assets/Datasheets/BS170F.pdf" H 5400 4200 50  0001 L CNN
