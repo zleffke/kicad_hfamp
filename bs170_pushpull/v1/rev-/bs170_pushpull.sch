@@ -1,0 +1,675 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "BS170 Push Pull HF Power Amplifier - V1"
+Date "2020-05-10"
+Rev "-"
+Comp "Amateur Radio"
+Comment1 "Prototype for Testing"
+Comment2 "creativecommons.org/licenses/by/4.0/"
+Comment3 "License: CC BY 4.0"
+Comment4 "Author: Zach Leffke, KJ4QLP"
+$EndDescr
+$Comp
+L Transistor_FET:BS170F Q1
+U 1 1 5EBA2B8D
+P 5450 4000
+F 0 "Q1" H 5655 4046 50  0000 L CNN
+F 1 "BS170F" H 5655 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5650 3925 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/BS170F.pdf" H 5450 4000 50  0001 L CNN
+	1    5450 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5EBA8091
+P 5300 4500
+F 0 "#PWR010" H 5300 4250 50  0001 C CNN
+F 1 "GND" H 5305 4327 50  0000 C CNN
+F 2 "" H 5300 4500 50  0001 C CNN
+F 3 "" H 5300 4500 50  0001 C CNN
+	1    5300 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transformer:ADT1-6T TR1
+U 1 1 5EBA85CC
+P 4200 4500
+F 0 "TR1" H 4200 4881 50  0000 C CNN
+F 1 "ADT1-6T" H 4200 4790 50  0000 C CNN
+F 2 "minicircuits_footprints:Mini-Circuits_CD637_H5.23mm" H 4200 4150 50  0001 C CNN
+F 3 "https://www.minicircuits.com/pdfs/ADT1-6T+.pdf" H 4200 4500 50  0001 C CNN
+	1    4200 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 5EBA9D65
+P 4550 4350
+F 0 "R1" H 4618 4396 50  0000 L CNN
+F 1 "220" H 4618 4305 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 4590 4340 50  0001 C CNN
+F 3 "~" H 4550 4350 50  0001 C CNN
+	1    4550 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5EBAA004
+P 3850 4700
+F 0 "C3" V 3598 4700 50  0000 C CNN
+F 1 "C" V 3689 4700 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 3888 4550 50  0001 C CNN
+F 3 "~" H 3850 4700 50  0001 C CNN
+	1    3850 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 4300 4400 4200
+Wire Wire Line
+	4400 4200 4550 4200
+$Comp
+L Device:R_US R3
+U 1 1 5EBADAF1
+P 4550 4650
+F 0 "R3" H 4618 4696 50  0000 L CNN
+F 1 "220" H 4618 4605 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 4590 4640 50  0001 C CNN
+F 3 "~" H 4550 4650 50  0001 C CNN
+	1    4550 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4700 4400 4800
+Wire Wire Line
+	4400 4800 4450 4800
+Wire Wire Line
+	4400 4500 4500 4500
+Connection ~ 4550 4500
+$Comp
+L Device:R_US R4
+U 1 1 5EBBFEE5
+P 5550 4650
+F 0 "R4" H 5618 4696 50  0000 L CNN
+F 1 "2.2" H 5618 4605 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 5590 4640 50  0001 C CNN
+F 3 "~" H 5550 4650 50  0001 C CNN
+	1    5550 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5EBC07FC
+P 5550 4350
+F 0 "R2" H 5618 4396 50  0000 L CNN
+F 1 "2.2" H 5618 4305 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 5590 4340 50  0001 C CNN
+F 3 "~" H 5550 4350 50  0001 C CNN
+	1    5550 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4000 4550 4000
+Wire Wire Line
+	4550 4000 4550 4200
+Connection ~ 4550 4200
+Wire Wire Line
+	4550 4800 4550 5000
+Wire Wire Line
+	4550 5000 5250 5000
+Connection ~ 4550 4800
+$Comp
+L Transformer:ADT1-6T TR2
+U 1 1 5EBC4008
+P 6550 4500
+F 0 "TR2" H 6550 4075 50  0000 C CNN
+F 1 "ADT1-6T" H 6550 4166 50  0000 C CNN
+F 2 "minicircuits_footprints:Mini-Circuits_CD637_H5.23mm" H 6550 4150 50  0001 C CNN
+F 3 "https://www.minicircuits.com/pdfs/ADT1-6T+.pdf" H 6550 4500 50  0001 C CNN
+	1    6550 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 3800 6150 3800
+Wire Wire Line
+	6350 3800 6350 4300
+Wire Wire Line
+	5550 5200 6200 5200
+Wire Wire Line
+	6350 5200 6350 4700
+Wire Wire Line
+	4550 4500 4900 4500
+Wire Wire Line
+	6350 4500 6250 4500
+Wire Wire Line
+	6050 4500 6050 3500
+$Comp
+L power:GND #PWR09
+U 1 1 5EBC66E4
+P 6750 4300
+F 0 "#PWR09" H 6750 4050 50  0001 C CNN
+F 1 "GND" H 6755 4127 50  0000 C CNN
+F 2 "" H 6750 4300 50  0001 C CNN
+F 3 "" H 6750 4300 50  0001 C CNN
+	1    6750 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J5
+U 1 1 5EBC7344
+P 7250 4700
+F 0 "J5" H 7350 4675 50  0000 L CNN
+F 1 "RF_OUT" H 7350 4584 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount" H 7250 4700 50  0001 C CNN
+F 3 " ~" H 7250 4700 50  0001 C CNN
+	1    7250 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5EBC8082
+P 7250 4900
+F 0 "#PWR012" H 7250 4650 50  0001 C CNN
+F 1 "GND" H 7255 4727 50  0000 C CNN
+F 2 "" H 7250 4900 50  0001 C CNN
+F 3 "" H 7250 4900 50  0001 C CNN
+	1    7250 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 5EBC86B8
+P 3500 4700
+F 0 "J4" H 3428 4938 50  0000 C CNN
+F 1 "RF_IN" H 3428 4847 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount" H 3500 4700 50  0001 C CNN
+F 3 " ~" H 3500 4700 50  0001 C CNN
+	1    3500 4700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5EBCB937
+P 3500 4900
+F 0 "#PWR011" H 3500 4650 50  0001 C CNN
+F 1 "GND" H 3505 4727 50  0000 C CNN
+F 2 "" H 3500 4900 50  0001 C CNN
+F 3 "" H 3500 4900 50  0001 C CNN
+	1    3500 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5EBCBE33
+P 4000 4300
+F 0 "#PWR08" H 4000 4050 50  0001 C CNN
+F 1 "GND" H 4005 4127 50  0000 C CNN
+F 2 "" H 4000 4300 50  0001 C CNN
+F 3 "" H 4000 4300 50  0001 C CNN
+	1    4000 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4500 5300 4500
+Connection ~ 5550 4500
+$Comp
+L Device:L L1
+U 1 1 5EBCC8DC
+P 6050 2700
+F 0 "L1" H 6103 2746 50  0000 L CNN
+F 1 "L" H 6103 2655 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6050 2700 50  0001 C CNN
+F 3 "~" H 6050 2700 50  0001 C CNN
+	1    6050 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5EBCCFF1
+P 5900 3500
+F 0 "C1" V 5648 3500 50  0000 C CNN
+F 1 "C" V 5739 3500 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 5938 3350 50  0001 C CNN
+F 3 "~" H 5900 3500 50  0001 C CNN
+	1    5900 3500
+	0    1    1    0   
+$EndComp
+Connection ~ 6050 3500
+$Comp
+L Device:C C2
+U 1 1 5EBCE8E8
+P 6200 3500
+F 0 "C2" V 5948 3500 50  0000 C CNN
+F 1 "C" V 6039 3500 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 6238 3350 50  0001 C CNN
+F 3 "~" H 6200 3500 50  0001 C CNN
+	1    6200 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5EBCF94E
+P 6350 3500
+F 0 "#PWR05" H 6350 3250 50  0001 C CNN
+F 1 "GND" H 6355 3327 50  0000 C CNN
+F 2 "" H 6350 3500 50  0001 C CNN
+F 3 "" H 6350 3500 50  0001 C CNN
+	1    6350 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5EBCFEF7
+P 5750 3500
+F 0 "#PWR04" H 5750 3250 50  0001 C CNN
+F 1 "GND" H 5755 3327 50  0000 C CNN
+F 2 "" H 5750 3500 50  0001 C CNN
+F 3 "" H 5750 3500 50  0001 C CNN
+	1    5750 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L2
+U 1 1 5EBFEC2A
+P 6250 2700
+F 0 "L2" H 6303 2746 50  0000 L CNN
+F 1 "L" H 6303 2655 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 6250 2700 50  0001 C CNN
+F 3 "~" H 6250 2700 50  0001 C CNN
+	1    6250 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 2550 6050 2550
+Wire Wire Line
+	6250 2850 6050 2850
+Connection ~ 6050 2850
+Wire Wire Line
+	4550 4000 4550 3750
+Wire Wire Line
+	4550 3750 4200 3750
+Connection ~ 4550 4000
+Wire Wire Line
+	4200 3850 4500 3850
+Wire Wire Line
+	4500 3850 4500 4500
+Connection ~ 4500 4500
+Wire Wire Line
+	4500 4500 4550 4500
+Wire Wire Line
+	4200 3950 4450 3950
+Wire Wire Line
+	4450 3950 4450 4800
+Connection ~ 4450 4800
+Wire Wire Line
+	4450 4800 4550 4800
+Wire Wire Line
+	4000 4700 4000 4450
+Wire Wire Line
+	4000 4450 3700 4450
+Wire Wire Line
+	3700 4450 3700 3950
+Connection ~ 4000 4700
+$Comp
+L power:GND #PWR06
+U 1 1 5EC71B49
+P 3550 3750
+F 0 "#PWR06" H 3550 3500 50  0001 C CNN
+F 1 "GND" H 3555 3577 50  0000 C CNN
+F 2 "" H 3550 3750 50  0001 C CNN
+F 3 "" H 3550 3750 50  0001 C CNN
+	1    3550 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 3750 3550 3750
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J2
+U 1 1 5EC77A15
+P 3900 3850
+F 0 "J2" H 3950 4167 50  0000 C CNN
+F 1 "TR1" H 3950 4076 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3900 3850 50  0001 C CNN
+F 3 "~" H 3900 3850 50  0001 C CNN
+	1    3900 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J3
+U 1 1 5EC7A335
+P 6850 3850
+F 0 "J3" H 6900 3525 50  0000 C CNN
+F 1 "TR2" H 6900 3616 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 6850 3850 50  0001 C CNN
+F 3 "~" H 6850 3850 50  0001 C CNN
+	1    6850 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 3950 7050 4500
+Wire Wire Line
+	7050 4500 6750 4500
+Wire Wire Line
+	6750 4500 6750 4700
+Connection ~ 6750 4700
+$Comp
+L power:GND #PWR07
+U 1 1 5EC7C767
+P 7050 3750
+F 0 "#PWR07" H 7050 3500 50  0001 C CNN
+F 1 "GND" V 7055 3622 50  0000 R CNN
+F 2 "" H 7050 3750 50  0001 C CNN
+F 3 "" H 7050 3750 50  0001 C CNN
+	1    7050 3750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6550 3850 6250 3850
+Wire Wire Line
+	6250 3850 6250 4500
+Connection ~ 6250 4500
+Wire Wire Line
+	6250 4500 6050 4500
+Wire Wire Line
+	6550 3750 6150 3750
+Wire Wire Line
+	6150 3750 6150 3800
+Connection ~ 6150 3800
+Wire Wire Line
+	6150 3800 6350 3800
+Wire Wire Line
+	6550 3950 6200 3950
+Wire Wire Line
+	6200 3950 6200 5200
+Connection ~ 6200 5200
+Wire Wire Line
+	6200 5200 6350 5200
+$Comp
+L Device:C C4
+U 1 1 5EBA9479
+P 6900 4700
+F 0 "C4" V 6648 4700 50  0000 C CNN
+F 1 "C" V 6739 4700 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 6938 4550 50  0001 C CNN
+F 3 "~" H 6900 4700 50  0001 C CNN
+	1    6900 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT_US RV1
+U 1 1 5EBFBC56
+P 4400 2900
+F 0 "RV1" H 4332 2946 50  0000 R CNN
+F 1 "10k" H 4332 2855 50  0000 R CNN
+F 2 "Potentiometer_SMD:Potentiometer_Bourns_3314G_Vertical" H 4400 2900 50  0001 C CNN
+F 3 "~" H 4400 2900 50  0001 C CNN
+	1    4400 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Open JP2
+U 1 1 5EBFDFE7
+P 4900 2900
+F 0 "JP2" H 4900 3105 50  0000 C CNN
+F 1 "Select" H 4900 3014 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels" H 4900 2900 50  0001 C CNN
+F 3 "~" H 4900 2900 50  0001 C CNN
+	1    4900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5EC001F6
+P 4650 2750
+F 0 "JP1" H 4650 2955 50  0000 C CNN
+F 1 "VR_select" H 4650 2864 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4650 2750 50  0001 C CNN
+F 3 "~" H 4650 2750 50  0001 C CNN
+	1    4650 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2750 4400 2750
+$Comp
+L power:GND #PWR03
+U 1 1 5EC223DF
+P 4400 3050
+F 0 "#PWR03" H 4400 2800 50  0001 C CNN
+F 1 "GND" H 4405 2877 50  0000 C CNN
+F 2 "" H 4400 3050 50  0001 C CNN
+F 3 "" H 4400 3050 50  0001 C CNN
+	1    4400 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2750 5100 2750
+Connection ~ 5100 2750
+Wire Wire Line
+	5100 2750 5100 2900
+Wire Wire Line
+	4700 2900 4550 2900
+Wire Wire Line
+	5300 2550 5100 2550
+Wire Wire Line
+	5100 2550 5100 2750
+Wire Wire Line
+	5300 2350 5300 2550
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5EBB1763
+P 5500 2150
+F 0 "J1" V 5562 2294 50  0000 L CNN
+F 1 "BIAS" V 5653 2294 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5500 2150 50  0001 C CNN
+F 3 "~" H 5500 2150 50  0001 C CNN
+	1    5500 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5600 2350 5600 2550
+Wire Wire Line
+	5600 2550 6050 2550
+Connection ~ 6050 2550
+Wire Wire Line
+	5400 2350 5400 2500
+Wire Wire Line
+	5500 2500 5500 2350
+Wire Wire Line
+	5400 2500 5450 2500
+$Comp
+L power:GND #PWR01
+U 1 1 5EC33DAD
+P 5450 2500
+F 0 "#PWR01" H 5450 2250 50  0001 C CNN
+F 1 "GND" H 5455 2327 50  0000 C CNN
+F 2 "" H 5450 2500 50  0001 C CNN
+F 3 "" H 5450 2500 50  0001 C CNN
+	1    5450 2500
+	1    0    0    -1  
+$EndComp
+Connection ~ 5450 2500
+Wire Wire Line
+	5450 2500 5500 2500
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5EBD1D61
+P 5400 2900
+F 0 "TP1" V 5354 3088 50  0000 L CNN
+F 1 "GND" V 5445 3088 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 5600 2900 50  0001 C CNN
+F 3 "~" H 5600 2900 50  0001 C CNN
+	1    5400 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5EBD25FB
+P 5400 2900
+F 0 "#PWR02" H 5400 2650 50  0001 C CNN
+F 1 "GND" H 5405 2727 50  0000 C CNN
+F 2 "" H 5400 2900 50  0001 C CNN
+F 3 "" H 5400 2900 50  0001 C CNN
+	1    5400 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 5850 5650 0    50   Input ~ 0
+Q1_G
+Text GLabel 5850 5750 0    50   Input ~ 0
+Q1_D
+Text GLabel 5850 5850 0    50   Input ~ 0
+Q1_S
+Text GLabel 5100 4000 3    50   Input ~ 0
+Q1_G
+Text GLabel 5450 4200 0    50   Input ~ 0
+Q1_S
+Wire Wire Line
+	5450 4200 5550 4200
+Connection ~ 5550 4200
+$Comp
+L Connector:Conn_01x01_Male J6
+U 1 1 5EBAD44E
+P 6050 5650
+F 0 "J6" H 6000 5650 50  0000 R CNN
+F 1 "Q1_G" H 5850 5650 50  0000 R CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 5650 50  0001 C CNN
+F 3 "~" H 6050 5650 50  0001 C CNN
+	1    6050 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J7
+U 1 1 5EBB47E9
+P 6050 5750
+F 0 "J7" H 6000 5750 50  0000 R CNN
+F 1 "Q1_G" H 5850 5750 50  0000 R CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 5750 50  0001 C CNN
+F 3 "~" H 6050 5750 50  0001 C CNN
+	1    6050 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J8
+U 1 1 5EBB49D5
+P 6050 5850
+F 0 "J8" H 6000 5850 50  0000 R CNN
+F 1 "Q1_G" H 5850 5850 50  0000 R CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 5850 50  0001 C CNN
+F 3 "~" H 6050 5850 50  0001 C CNN
+	1    6050 5850
+	-1   0    0    1   
+$EndComp
+Text GLabel 5100 5000 3    50   Input ~ 0
+Q2_G
+Text GLabel 5450 4800 0    50   Input ~ 0
+Q2_S
+$Comp
+L Transistor_FET:BS170F Q2
+U 1 1 5EBA5494
+P 5450 5000
+F 0 "Q2" H 5655 4954 50  0000 L CNN
+F 1 "BS170F" H 5655 5045 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5650 4925 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/BS170F.pdf" H 5450 5000 50  0001 L CNN
+	1    5450 5000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5450 5200 5550 5200
+Connection ~ 5550 5200
+Text GLabel 5450 5200 0    50   Input ~ 0
+Q2_D
+Text GLabel 5450 3800 0    50   Input ~ 0
+Q1_D
+Wire Wire Line
+	5450 3800 5550 3800
+Connection ~ 5550 3800
+Wire Wire Line
+	5450 4800 5550 4800
+Connection ~ 5550 4800
+Text GLabel 5850 5950 0    50   Input ~ 0
+Q2_G
+Text GLabel 5850 6050 0    50   Input ~ 0
+Q2_D
+Text GLabel 5850 6150 0    50   Input ~ 0
+Q2_S
+$Comp
+L Connector:Conn_01x01_Male J9
+U 1 1 5EBC32BA
+P 6050 5950
+F 0 "J9" H 6000 5950 50  0000 R CNN
+F 1 "Q1_G" H 5850 5950 50  0000 R CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 5950 50  0001 C CNN
+F 3 "~" H 6050 5950 50  0001 C CNN
+	1    6050 5950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J10
+U 1 1 5EBC32C0
+P 6050 6050
+F 0 "J10" H 6000 6050 50  0000 R CNN
+F 1 "Q1_G" H 5850 6050 50  0000 R CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 6050 50  0001 C CNN
+F 3 "~" H 6050 6050 50  0001 C CNN
+	1    6050 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J11
+U 1 1 5EBC32C6
+P 6050 6150
+F 0 "J11" H 6000 6150 50  0000 R CNN
+F 1 "Q1_G" H 5850 6150 50  0000 R CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 6150 50  0001 C CNN
+F 3 "~" H 6050 6150 50  0001 C CNN
+	1    6050 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5EBDD76E
+P 5050 3450
+F 0 "C5" V 4798 3450 50  0000 C CNN
+F 1 "C" V 4889 3450 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 5088 3300 50  0001 C CNN
+F 3 "~" H 5050 3450 50  0001 C CNN
+	1    5050 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5EBDDF0D
+P 5200 3450
+F 0 "#PWR0101" H 5200 3200 50  0001 C CNN
+F 1 "GND" H 5205 3277 50  0000 C CNN
+F 2 "" H 5200 3450 50  0001 C CNN
+F 3 "" H 5200 3450 50  0001 C CNN
+	1    5200 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3450 4900 4500
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5EBEC5E1
+P 6050 3000
+F 0 "TP2" V 6004 3188 50  0000 L CNN
+F 1 "DRAIN" V 6095 3188 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6250 3000 50  0001 C CNN
+F 3 "~" H 6250 3000 50  0001 C CNN
+	1    6050 3000
+	0    1    1    0   
+$EndComp
+Connection ~ 6050 3000
+Wire Wire Line
+	6050 3000 6050 2850
+Wire Wire Line
+	6050 3000 6050 3500
+Wire Wire Line
+	4900 3050 4900 3450
+Connection ~ 4900 3450
+$EndSCHEMATC
